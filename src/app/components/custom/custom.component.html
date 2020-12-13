@@ -1,0 +1,23 @@
+<p>custom works!</p>
+<!-- 创建一个自定义指令
+ng g d directives/highlight --skipTests
+指令也像组件一样默认挂载到根模块 -->
+
+<p appHighlight [highlightColor]='color'>directive</p>
+
+<!-- 组件中使用 -->
+<!-- <app-tel appHighlight [highlightColor]='color'></app-tel> -->
+
+<!-- 传静态值 -->
+<!-- <p appHighlight highlightColor='blue'>directive</p> -->
+
+<!-- 给传入值一个别名，这个别名跟指令名称相同，就可以巧妙简写-->
+<!-- <p [appHighlight]='color'>directive</p> -->
+
+<!-- 输入时实时改变字体和边框颜色的指令 -->
+<!-- <input type="text" appBordercolor> -->
+
+<!-- 
+ngOnChange函数用于监听输入数据，只要输入数据发生变化，就会触发这个函数
+@Input() msg: string = ''
+只要msg发生变化就会触发 -->
